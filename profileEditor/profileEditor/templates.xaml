@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:profileEditor">
+
+    <DataTemplate x:Key="dTemplate">
+        <WrapPanel>
+            <TextBlock Text="{Binding Path=(ItemsControl.AlternationIndex), RelativeSource={RelativeSource AncestorType=ListViewItem}}"/>
+            <TextBlock Text=" X1: " />
+            <TextBox Text="{Binding start.X,  StringFormat=\{0:0.##\}}"  FontWeight="Bold"/>
+            <TextBlock Text="Y1: " />
+            <TextBox  Text="{Binding start.Y, StringFormat=\{0:0.##\}}" FontWeight="Bold"/>
+        </WrapPanel>
+    </DataTemplate>
+
+</ResourceDictionary>
